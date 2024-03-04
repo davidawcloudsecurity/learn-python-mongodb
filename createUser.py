@@ -8,11 +8,11 @@ username = "ambienceUser2"
 password = "your_password"
 default = ["read"]  # Should be a list even if only one role is assigned
 database = "admin"
-
+timeout = 5000
 
 try:
     # Connect to MongoDB
-    client = pymongo.MongoClient(uri)
+    client = pymongo.MongoClient(uri, serverSelectionTimeoutMS=timeout)
 
     # Access the admin database (you need administrative privileges to create a user)
     db = client[database]
@@ -24,3 +24,5 @@ try:
 
 except pymongo.errors.OperationFailure as e:
     print(f"Error creating user: {e}")
+except pymongo.errors.ConnectionFailure as e:
+    print(f"Failed to connect to MongoDB: {e}")
