@@ -7,12 +7,13 @@ uri = "mongodb://localhost:27017/"
 username = "ambienceUser"
 password = "123"
 default = ["read"]  # Should be a list even if only one role is assigned
+label = "hitachi_"
 databases_roles = {
-    "ambience": ["ambienceRole"],
-    "ambience-logs": ["ambienceRole"],
-    "ambience-temp": ["ambienceRole"],
-    "eno": ["ambienceRole"],
-    "config": ["read"]
+    f"{label}ambience": ["ambienceRole"],
+    f"{label}ambience-logs": ["ambienceRole"],
+    f"{label}ambience-temp": ["ambienceRole"],
+    f"{label}eno": ["ambienceRole"],
+#    "config": ["read"] Is this needed?
 }
 timeout = 5000
 
