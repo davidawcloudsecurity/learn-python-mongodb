@@ -7,7 +7,7 @@ uri = "mongodb://localhost:27017/"
 username = "ambienceUser"
 password = "123"
 default = ["read"]  # Should be a list even if only one role is assigned
-label = "hitachi_"
+label = ""
 databases_roles = {
     f"{label}ambience": ["ambienceRole"],
     f"{label}ambience-logs": ["ambienceRole"],
