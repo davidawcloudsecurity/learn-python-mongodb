@@ -4,7 +4,7 @@ import pymongo
 uri = "mongodb://localhost:27017/"
 
 # Attributes for a new role
-label = "hitachi_"
+label = ""
 databases = [f"{label}eno", f"{label}ambience", f"{label}ambience-logs", f"{label}ambience-temp"]
 rolename ="ambienceRole"
 default = ["listDatabases", "dropCollection", "reIndex", "dropIndex", "createIndex", "createCollection", "listCollections", "listIndexes", "find", "update", "insert", "collMod", "collStats", "reIndex", "indexStats", "planCacheIndexFilter", "enableProfiler", "validate", "remove", "planCacheRead", "planCacheWrite", "bypassDocumentValidation", "enableProfiler", "storageDetails", "validate", "compact"]
