@@ -5,7 +5,7 @@ uri = "mongodb://localhost:27017/"
 
 # Credentials for the new user
 username = "ambienceUser"
-password = "your_password"
+password = "123"
 roles = ["readWrite"]  # Should be a list even if only one role is assigned
 database = "ambience"
 rolename ="role-name10"
