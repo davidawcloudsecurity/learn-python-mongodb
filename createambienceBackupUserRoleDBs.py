@@ -5,12 +5,12 @@ uri = "mongodb://localhost:27017/"
 
 # Credentials for the new user
 label = "" # This will append label to username and database (e.g label = 2_, database = 2_ambience, username = 2_ambienceAdmin)
-username = "ambienceAdmin"
+username = "ambienceBackup"
 password = "123"
 databases_roles = {
-    f"{label}ambience": ["dbOwner"],
-    f"{label}ambience-logs": ["dbOwner"],
-    f"{label}eno": ["dbOwner"]
+    f"{label}ambience": ["backup", "restore"],
+    f"{label}ambience-logs": ["backup", "restore"],
+    f"{label}eno": ["backup", "restore"]
 }
 timeout = 5000
 
