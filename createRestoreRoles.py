@@ -6,10 +6,9 @@ uri = "mongodb://localhost:27017/"
 # Attributes for a new role
 label = ""
 databases = [f"{label}eno", f"{label}ambience", f"{label}ambience-logs", f"{label}ambience-temp"]
-rolename ="backup"
+rolename ="restore"
 default = [
-    "listCollections",
-    "find",
+    "insert",
 ]
 timeout = 5000
 
