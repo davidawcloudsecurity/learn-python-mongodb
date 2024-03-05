@@ -5,3 +5,7 @@ https://hackernoon.com/mongodb-and-docker-compose-how-to-enable-a-custom-user-an
 How to install pymongo
 
 python -m pip install pymongo
+
+How to create root username and password
+
+https://www.mongodb.com/community/forums/t/credentials-with-docker-compose/255648
