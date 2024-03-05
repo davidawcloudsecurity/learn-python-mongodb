@@ -4,9 +4,9 @@ import pymongo
 uri = "mongodb://localhost:27017/"
 
 # Credentials for the new user
-username = "ambienceUser2"
-password = "your_password"
-default = ["read"]  # Should be a list even if only one role is assigned
+username = "ambienceUser"
+password = "123"
+default = ["ambienceRole"]  # Should be a list even if only one role is assigned
 database = "admin"
 timeout = 5000
 
@@ -20,7 +20,7 @@ try:
     # Create the user
     db.command('createUser', username, pwd=password, roles=default)
 
-    print(f"User '{username}' created successfully with role: '{default}'")
+    print(f"User '{username}' created successfully with role: '{default}' in '{database}'")
 
 except pymongo.errors.OperationFailure as e:
     print(f"Error creating user: {e}")
