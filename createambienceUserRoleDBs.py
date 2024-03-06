@@ -4,7 +4,7 @@ import pymongo
 uri = "mongodb://root:123@localhost:27017/"
 
 # Credentials for the new user
-username = "ambienceUser3"
+username = "ambienceUser9"
 password = "123"
 defaultRole = "ambienceRole"
 default = ["read"]  # Should be a list even if only one role is assigned

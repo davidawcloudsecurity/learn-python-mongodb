@@ -5,16 +5,18 @@ import pymongo
 uri = "mongodb://root:123@localhost:27017/"
 
 # Credentials for the new user
-username = "ambienceUser6"
+username = "ambienceUser16"
 password = getpass.getpass(prompt="Enter password: ")
+database = "admin"
+label = ""
 
 # Roles for the new user
 roles = [
-    {"role": "ambienceRole", "db": "ambience"},
-    {"role": "ambienceRole", "db": "eno"},
-    {"role": "ambienceRole", "db": "ambience-logs"},
-    {"role": "ambienceRole", "db": "ambience-temp"},
-    {"role": "read", "db": "config"}
+    {"role": "ambienceRole", "db": f"{label}ambience"},
+    {"role": "ambienceRole", "db": f"{label}eno"},
+    {"role": "ambienceRole", "db": f"{label}ambience-logs"},
+    {"role": "ambienceRole", "db": f"{label}ambience-temp"}
+#    {"role": "read", "db": "config"}
 ]
 
 try:
@@ -22,10 +24,10 @@ try:
     client = pymongo.MongoClient(uri)
 
     # Access the admin database (you need administrative privileges to create a user)
-    db_admin = client.admin
+    db = client[database]
 
     # Create the user with the specified roles
-    db_admin.command('createUser', username, pwd=password, roles=roles)
+    db.command('createUser', username, pwd=password, roles=roles)
 
     print(f"User '{username}' created successfully with roles: {roles}")
 
