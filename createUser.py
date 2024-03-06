@@ -7,7 +7,7 @@ uri = "mongodb://localhost:27017/"
 username = "ambienceUser"
 password = "123"
 default = ["ambienceRole"]  # Should be a list even if only one role is assigned
-database = "admin"
+database = ""
 timeout = 5000
 
 try:

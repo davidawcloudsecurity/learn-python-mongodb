@@ -1,18 +1,20 @@
 import pymongo
 
 # Connection URI for MongoDB running on localhost
-uri = "mongodb://localhost:27017/"
+uri = "mongodb://root:123@localhost:27017/"
 
 # Credentials for the new user
-username = "ambienceUser"
+username = "ambienceUser3"
 password = "123"
+defaultRole = "ambienceRole"
 default = ["read"]  # Should be a list even if only one role is assigned
 label = ""
 databases_roles = {
-    f"{label}ambience": ["ambienceRole"],
-    f"{label}ambience-logs": ["ambienceRole"],
-    f"{label}ambience-temp": ["ambienceRole"],
-    f"{label}eno": ["ambienceRole"],
+    f"{label}admin": ["read"],
+    f"{label}ambience": [defaultRole],
+    f"{label}ambience-logs": [defaultRole],
+    f"{label}ambience-temp": [defaultRole],
+    f"{label}eno": [defaultRole],
 #    "config": ["read"] Is this needed?
 }
 timeout = 5000

@@ -1,0 +1,1 @@
+{"indexes":[{"v":{"$numberInt":"2"},"key":{"_id":{"$numberInt":"1"}},"name":"_id_"},{"v":{"$numberInt":"2"},"key":{"when":{"$numberInt":"1"}},"name":"when_1"}],"uuid":"79f41c25f5994c5d80a26d884674fb2b","collectionName":"Agenda","type":"collection"}

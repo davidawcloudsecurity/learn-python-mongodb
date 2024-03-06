@@ -7,12 +7,12 @@ services:
       - 127.0.0.1:27017:27017
     volumes:
       - elixirmongodbdata:/data/db
-        #    command: [--auth]
-    environment:
-      - MONGO_INITDB_ROOT_USERNAME=${MONGO_INITDB_ROOT_USERNAME}
-      - MONGO_INITDB_ROOT_PASSWORD=${MONGO_INITDB_ROOT_PASSWORD}
-      - MONGO_INITDB_DATABASE=${MONGO_INITDB_DATABASE}
-    env_file: .env  
+    command: [--auth]
+        #    environment:
+        #      - MONGO_INITDB_ROOT_USERNAME="ambienceAdmin"
+        #      - MONGO_INITDB_ROOT_PASSWORD="123"
+        #      - MONGO_INITDB_DATABASE="admin"
+#    env_file: .env  
   elixir-ambience:
     container_name: elixir-ambience
     image: elixirtech/elixir-ambience
