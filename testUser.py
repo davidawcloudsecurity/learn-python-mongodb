@@ -5,9 +5,9 @@ import pymongo
 uri = "mongodb://root:123@localhost:27017/"
 
 # Credentials for the new user
-username = "ambienceUser16"
+username = "ambienceUser"
 password = getpass.getpass(prompt="Enter password: ")
-database = "admin"
+database = "ambience"
 label = ""
 
 # Roles for the new user

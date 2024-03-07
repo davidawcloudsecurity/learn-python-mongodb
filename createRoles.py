@@ -1,7 +1,7 @@
 import pymongo
 
 # Connection URI for MongoDB running on localhost
-uri = "mongodb://localhost:27017/"
+uri = "mongodb://root:123@localhost:27017/"
 
 # Attributes for a new role
 label = ""
