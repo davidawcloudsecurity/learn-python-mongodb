@@ -5,7 +5,7 @@ uri = "mongodb://localhost:27017/"
 
 # Credentials for the new user
 username = "root"
-password = "123"
+password = getpass.getpass(prompt="Enter password: ")
 default = ["root"]  # Should be a list even if only one role is assigned
 database = "admin"
 timeout = 5000

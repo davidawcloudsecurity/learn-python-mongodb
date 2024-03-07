@@ -5,17 +5,18 @@ import pymongo
 uri = "mongodb://root:123@localhost:27017/"
 
 # Credentials for the new user
-username = "ambienceUser"
+username = input("Enter the username: ")
 password = getpass.getpass(prompt="Enter password: ")
 database = "ambience"
+roleName = "ambienceRole"
 label = ""
 
 # Roles for the new user
 roles = [
-    {"role": "ambienceRole", "db": f"{label}ambience"},
-    {"role": "ambienceRole", "db": f"{label}eno"},
-    {"role": "ambienceRole", "db": f"{label}ambience-logs"},
-    {"role": "ambienceRole", "db": f"{label}ambience-temp"}
+    {"role": f"{roleName}", "db": f"{label}ambience"},
+    {"role": f"{roleName}", "db": f"{label}eno"},
+    {"role": f"{roleName}", "db": f"{label}ambience-logs"},
+    {"role": f"{roleName}", "db": f"{label}ambience-temp"}
 #    {"role": "read", "db": "config"}
 ]
 
