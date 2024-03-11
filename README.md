@@ -13,3 +13,6 @@ https://www.mongodb.com/community/forums/t/credentials-with-docker-compose/25564
 Outstanding
 1. create roles and user using js
 2. identify if ambience-logs\LogEvents permission denied has anything to do with user not added to admin db
+
+How to use Lambda, Python and MongoDB
+https://blog.shikisoft.com/access-mongodb-instance-from-aws-lambda-python/
